@@ -1,7 +1,7 @@
 "use client";
 import { useMutation } from "@tanstack/react-query";
 import type { LoginInput } from "./login.schema";
-import { login } from "./login.api.";
+import { login } from "./login.api";
 import { useAuthContext } from "@/providers/AuthProvider";
 import { toast } from "sonner";
 import { getErrorMessage } from "@/shared/utils/get-error-message";

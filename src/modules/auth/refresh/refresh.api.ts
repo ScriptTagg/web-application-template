@@ -1,7 +1,7 @@
 import { apiPrivate } from "@/shared/lib/api-client";
-import type { RefreshDto } from "../shared/types";
 import type { ApiResponse } from "@/shared/types";
 import { ApiCustomError } from "@/shared/errors/api-error";
+import type { RefreshDto } from "./refresh.types";
 
 export const refresh = async (): Promise<RefreshDto> => {
   const response = await apiPrivate.post<ApiResponse<RefreshDto>>("/auth/refresh");

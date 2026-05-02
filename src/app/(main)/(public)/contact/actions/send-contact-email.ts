@@ -11,7 +11,7 @@ export async function sendContactEmail(formData: ContactFormValues) {
     const validatedData = contactSchema.parse(formData);
     const { data, error } = await resend.emails.send({
       from: `${siteConfig.name} <onboarding@resend.dev>`,
-      to: [siteConfig.email],
+      to: [siteConfig.contact.email.label],
       subject: "New contact form submission",
       replyTo: validatedData.email,
       react: ContactEmailTemplate({ formData: validatedData }),
