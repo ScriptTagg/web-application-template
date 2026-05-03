@@ -116,6 +116,21 @@
   --radius-rad-3xl: var(--round-3xl);
 }
 
+@layer components {
+  .radius-btn {
+    @apply rounded-rad-base;
+  }
+  .radius-input {
+    @apply rounded-rad-base;
+  }
+  .radius-card {
+    @apply rounded-rad-base;
+  }
+  .radius-card-lg {
+    @apply rounded-rad-base;
+  }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -127,6 +142,10 @@
 
   form {
     @apply w-full max-w-82 mx-auto;
+  }
+
+  button {
+    @apply hover:scale-105 active:scale-95 duration-300 ease-in cursor-pointer;
   }
 
   h1,
